@@ -1,0 +1,43 @@
+<svg width="300" height="155" viewBox="0 0 300 155" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+      <text font-family="Georgia, serif" font-size="44" letter-spacing="3" fill="#1a1814">
+        <tspan x="112" y="72">N</tspan>
+        <tspan x="181" y="72">MAD</tspan>
+      </text>
+
+      <text font-family="Georgia, serif" font-size="44" letter-spacing="3" fill="#1a1814">
+        <tspan x="232" y="128">PS</tspan>
+      </text>
+
+      <!-- Route line -->
+      <path
+        d="M 162 74 C 162 90 213 82 213 97"
+        stroke="#c8582a"
+        stroke-width="1.5"
+        stroke-dasharray="3 4"
+        stroke-linecap="round"
+      />
+
+      <!-- Pin 1 (origin) — amber -->
+      <path
+        d="M 162 74
+           C 158 62  149 58  149 54
+           A 13 13 0 0 1 175 54
+           C 175 58  166 62  162 74
+           Z"
+        fill="#e8a060"
+      />
+      <circle cx="162" cy="51" r="5" fill="#f2ede5"/>
+
+      <!-- Pin 2 (destination) — terracotta -->
+      <path
+        d="M 213 130
+           C 209 118  200 114  200 110
+           A 13 13 0 0 1 226 110
+           C 226 114  217 118  213 130
+           Z"
+        fill="#c8582a"
+      />
+      <circle cx="213" cy="107" r="5" fill="#f2ede5"/>
+
+    </svg>
