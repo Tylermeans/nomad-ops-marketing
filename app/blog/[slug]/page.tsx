@@ -37,12 +37,23 @@ const components = {
   li: (props: React.ComponentProps<"li">) => (
     <li className="text-stone leading-relaxed" {...props} />
   ),
-  a: (props: React.ComponentProps<"a">) => (
-    <a
-      className="text-copper hover:text-copper-dark underline underline-offset-2 transition-colors"
-      {...props}
-    />
-  ),
+  a: ({ href, children, ...props }: React.ComponentProps<"a">) => {
+    const isExternal = href?.startsWith("http")
+    return (
+      <a
+        href={href}
+        className="text-copper hover:text-copper-dark underline underline-offset-2 transition-colors"
+        {...(isExternal && {
+          target: "_blank",
+          rel: "noopener noreferrer",
+        })}
+        {...props}
+      >
+        {children}
+        {isExternal && <span className="sr-only"> (opens in a new tab)</span>}
+      </a>
+    )
+  },
   blockquote: (props: React.ComponentProps<"blockquote">) => (
     <blockquote
       className="border-l-4 border-copper/30 pl-6 my-6 text-stone italic"
