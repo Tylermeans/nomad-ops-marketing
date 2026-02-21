@@ -82,8 +82,8 @@ export default async function BlogPage({
                   href={`/blog/${post.slug}`}
                   className="inline-flex items-center gap-1.5 mt-4 text-sm font-medium text-copper hover:text-copper-dark transition-colors"
                 >
-                  Read more
-                  <ArrowRight className="h-3.5 w-3.5" />
+                  Read more<span className="sr-only">: {post.title}</span>
+                  <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
                 </Link>
               </article>
             ))}
@@ -147,7 +147,7 @@ export default async function BlogPage({
               className="inline-flex items-center justify-center gap-2 rounded-full bg-copper px-8 py-4 text-sm font-semibold text-warm-white hover:bg-copper-dark transition-colors"
             >
               Get Your Free Audit
-              <ArrowRight className="h-4 w-4" />
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
           </div>
           <p className="mt-5 text-sm text-stone/70">

@@ -186,7 +186,7 @@ export default function ServicesPage() {
                 key={s.title}
                 className="rounded-2xl border border-stone/15 p-8 hover:border-copper/30 transition-colors bg-warm-white"
               >
-                <s.icon className="h-6 w-6 text-copper mb-5" />
+                <s.icon className="h-6 w-6 text-copper mb-5" aria-hidden="true" />
                 <h2 className="text-xl font-semibold text-charcoal mb-3">
                   {s.title}
                 </h2>
@@ -199,7 +199,7 @@ export default function ServicesPage() {
                       key={f}
                       className="flex items-center gap-3 text-sm text-charcoal-light"
                     >
-                      <div className="h-1 w-1 rounded-full bg-copper shrink-0" />
+                      <div className="h-1 w-1 rounded-full bg-copper shrink-0" aria-hidden="true" />
                       {f}
                     </li>
                   ))}
@@ -249,7 +249,7 @@ export default function ServicesPage() {
             className="inline-flex items-center justify-center gap-2 rounded-full bg-copper px-7 py-3.5 text-sm font-semibold text-warm-white hover:bg-copper-dark transition-colors mt-8"
           >
             Get Your Free Audit
-            <ArrowRight className="h-4 w-4" />
+            <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Link>
         </div>
       </section>

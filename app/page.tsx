@@ -43,7 +43,7 @@ function Hero() {
             <span className="text-copper-light">as hard as you do.</span>
           </h1>
 
-          <p className="mt-6 text-lg text-warm-white/70 leading-relaxed max-w-lg">
+          <p className="mt-6 text-lg text-warm-white/80 leading-relaxed max-w-lg">
             We build websites that rank on Google, convert visitors into
             customers, and make your phone ring. No fluff. Just results.
           </p>
@@ -54,7 +54,7 @@ function Hero() {
               className="inline-flex items-center justify-center gap-2 rounded-full bg-copper px-7 py-3.5 text-sm font-semibold text-warm-white hover:bg-copper-light transition-colors"
             >
               Get Your Free Website Audit
-              <ArrowRight className="h-4 w-4" />
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
             <Link
               href="/services"
@@ -67,7 +67,7 @@ function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 motion-safe:animate-bounce" aria-hidden="true">
         <ChevronDown className="h-5 w-5 text-warm-white/40" />
       </div>
     </section>
@@ -125,15 +125,11 @@ function SplitFeature({
   reverse?: boolean
 }) {
   return (
-    <div
-      className={`grid lg:grid-cols-2 gap-12 lg:gap-20 items-center ${
-        reverse ? "lg:[direction:rtl]" : ""
-      }`}
-    >
+    <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
       {/* Image */}
       <div
         className={`relative aspect-[4/3] rounded-2xl overflow-hidden ${
-          reverse ? "lg:[direction:ltr]" : ""
+          reverse ? "lg:order-2" : ""
         }`}
       >
         <Image
@@ -146,13 +142,13 @@ function SplitFeature({
       </div>
 
       {/* Text */}
-      <div className={reverse ? "lg:[direction:ltr]" : ""}>
+      <div className={reverse ? "lg:order-1" : ""}>
         <p className="text-copper text-sm font-medium tracking-widest uppercase mb-3">
           {eyebrow}
         </p>
-        <h3 className="text-2xl sm:text-3xl font-bold text-charcoal leading-tight">
+        <h2 className="text-2xl sm:text-3xl font-bold text-charcoal leading-tight">
           {heading}
-        </h3>
+        </h2>
         <p className="mt-4 text-stone leading-relaxed">{text}</p>
       </div>
     </div>
@@ -243,7 +239,7 @@ function Services() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
           {services.map((s) => (
             <div key={s.title} className="group">
-              <s.icon className="h-6 w-6 text-copper mb-4" />
+              <s.icon className="h-6 w-6 text-copper mb-4" aria-hidden="true" />
               <h3 className="font-semibold text-charcoal mb-2">{s.title}</h3>
               <p className="text-sm text-stone leading-relaxed">
                 {s.description}
@@ -258,7 +254,7 @@ function Services() {
             className="inline-flex items-center gap-2 text-sm font-medium text-copper hover:text-copper-dark transition-colors"
           >
             View all services
-            <ArrowRight className="h-4 w-4" />
+            <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Link>
         </div>
       </div>
@@ -309,13 +305,13 @@ function Process() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12">
           {steps.map((s) => (
             <div key={s.num}>
-              <span className="text-4xl font-bold text-copper/30">
+              <span className="text-4xl font-bold text-copper/50" aria-hidden="true">
                 {s.num}
               </span>
               <h3 className="font-semibold text-warm-white mt-3 mb-2">
                 {s.title}
               </h3>
-              <p className="text-sm text-warm-white/60 leading-relaxed">
+              <p className="text-sm text-warm-white/80 leading-relaxed">
                 {s.text}
               </p>
             </div>
@@ -350,7 +346,7 @@ function NomadIdentity() {
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-warm-white max-w-3xl mx-auto leading-tight">
           Great work doesn&apos;t need a corner office.
         </h2>
-        <p className="mt-6 text-lg text-warm-white/70 max-w-2xl mx-auto leading-relaxed">
+        <p className="mt-6 text-lg text-warm-white/80 max-w-2xl mx-auto leading-relaxed">
           We work from the road. Coffee shops in Colorado, coworking spaces in
           Costa Rica, an Airstream somewhere in between. The location changes.
           The quality of work doesn&apos;t. You get a senior team without the
@@ -502,10 +498,10 @@ function CTA() {
             className="inline-flex items-center justify-center gap-2 rounded-full bg-copper px-8 py-4 text-sm font-semibold text-warm-white hover:bg-copper-dark transition-colors"
           >
             Get Your Free Audit
-            <ArrowRight className="h-4 w-4" />
+            <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Link>
         </div>
-        <p className="mt-5 text-sm text-stone/70">
+        <p className="mt-5 text-sm text-stone">
           Takes 30 seconds. Your report lands within 24 hours.
         </p>
       </div>

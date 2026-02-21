@@ -121,7 +121,7 @@ export default async function BlogPost({
             href="/blog"
             className="inline-flex items-center gap-1.5 text-sm text-stone hover:text-charcoal transition-colors mb-10"
           >
-            <ArrowLeft className="h-3.5 w-3.5" />
+            <ArrowLeft className="h-3.5 w-3.5" aria-hidden="true" />
             Back to blog
           </Link>
 
@@ -164,7 +164,7 @@ export default async function BlogPost({
               className="inline-flex items-center justify-center gap-2 rounded-full bg-copper px-8 py-4 text-sm font-semibold text-warm-white hover:bg-copper-dark transition-colors"
             >
               Get Your Free Audit
-              <ArrowRight className="h-4 w-4" />
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
           </div>
           <p className="mt-5 text-sm text-stone/70">

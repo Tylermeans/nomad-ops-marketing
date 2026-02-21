@@ -3,7 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { useState } from "react"
+import { useState, useEffect, useCallback } from "react"
 import { Menu, X } from "lucide-react"
 
 const links = [
@@ -17,6 +17,17 @@ const links = [
 export function Nav() {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
+
+  const close = useCallback(() => setOpen(false), [])
+
+  useEffect(() => {
+    if (!open) return
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") close()
+    }
+    document.addEventListener("keydown", onKeyDown)
+    return () => document.removeEventListener("keydown", onKeyDown)
+  }, [open, close])
 
   return (
     <header className="sticky top-0 z-50 border-b border-stone/10 bg-warm-white/80 backdrop-blur-xl">
@@ -67,12 +78,14 @@ export function Nav() {
             <button
               onClick={() => setOpen(!open)}
               className="md:hidden p-2"
-              aria-label="Toggle menu"
+              aria-label={open ? "Close menu" : "Open menu"}
+              aria-expanded={open}
+              aria-controls="mobile-nav"
             >
               {open ? (
-                <X className="h-5 w-5 text-charcoal" />
+                <X className="h-5 w-5 text-charcoal" aria-hidden="true" />
               ) : (
-                <Menu className="h-5 w-5 text-charcoal" />
+                <Menu className="h-5 w-5 text-charcoal" aria-hidden="true" />
               )}
             </button>
           </div>
@@ -80,7 +93,7 @@ export function Nav() {
 
         {/* Mobile nav */}
         {open && (
-          <nav className="md:hidden pb-6 pt-2 space-y-1">
+          <nav id="mobile-nav" className="md:hidden pb-6 pt-2 space-y-1">
             {links.map((link) => {
               const active =
                 link.href === "/"
@@ -90,7 +103,7 @@ export function Nav() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  onClick={() => setOpen(false)}
+                  onClick={close}
                   className={`block py-2.5 text-sm tracking-wide ${
                     active
                       ? "text-charcoal font-medium"

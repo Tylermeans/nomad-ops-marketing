@@ -77,14 +77,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <noscript>
             <iframe
               src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+              title="Google Tag Manager"
               height="0"
               width="0"
               style={{ display: "none", visibility: "hidden" }}
             />
           </noscript>
         )}
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:top-4 focus:left-4 focus:bg-copper focus:text-warm-white focus:px-4 focus:py-2 focus:rounded"
+        >
+          Skip to main content
+        </a>
         <Nav />
-        <main>{children}</main>
+        <main id="main">{children}</main>
         <Footer />
 
         {/* JSON-LD: Organization schema */}

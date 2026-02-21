@@ -58,7 +58,7 @@ export default function ContactPage() {
               <div className="space-y-8">
                 <div className="flex gap-5">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-cream shrink-0">
-                    <Mail className="h-5 w-5 text-copper" />
+                    <Mail className="h-5 w-5 text-copper" aria-hidden="true" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-charcoal">Email</h3>
@@ -73,7 +73,7 @@ export default function ContactPage() {
 
                 <div className="flex gap-5">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-cream shrink-0">
-                    <Clock className="h-5 w-5 text-copper" />
+                    <Clock className="h-5 w-5 text-copper" aria-hidden="true" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-charcoal">

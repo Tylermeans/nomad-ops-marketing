@@ -67,7 +67,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 pt-8 border-t border-warm-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-warm-white/40">
+        <div className="mt-14 pt-8 border-t border-warm-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-warm-white/70">
           <p>
             &copy; {new Date().getFullYear()} Nomad Ops. All rights reserved.
           </p>

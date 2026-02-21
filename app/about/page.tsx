@@ -102,7 +102,7 @@ export default function AboutPage() {
               <div className="space-y-8">
                 <div className="flex gap-5">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-cream shrink-0">
-                    <Code className="h-5 w-5 text-copper" />
+                    <Code className="h-5 w-5 text-copper" aria-hidden="true" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-charcoal">
@@ -119,7 +119,7 @@ export default function AboutPage() {
 
                 <div className="flex gap-5">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-cream shrink-0">
-                    <MapPin className="h-5 w-5 text-copper" />
+                    <MapPin className="h-5 w-5 text-copper" aria-hidden="true" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-charcoal">
@@ -135,7 +135,7 @@ export default function AboutPage() {
 
                 <div className="flex gap-5">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-cream shrink-0">
-                    <Heart className="h-5 w-5 text-copper" />
+                    <Heart className="h-5 w-5 text-copper" aria-hidden="true" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-charcoal">
@@ -208,7 +208,7 @@ export default function AboutPage() {
                 <h3 className="font-semibold text-warm-white mb-2">
                   {value.title}
                 </h3>
-                <p className="text-sm text-warm-white/60 leading-relaxed">
+                <p className="text-sm text-warm-white/80 leading-relaxed">
                   {value.text}
                 </p>
               </div>
@@ -232,7 +232,7 @@ export default function AboutPage() {
             className="inline-flex items-center justify-center gap-2 rounded-full bg-copper px-7 py-3.5 text-sm font-semibold text-warm-white hover:bg-copper-dark transition-colors mt-8"
           >
             Get in Touch
-            <ArrowRight className="h-4 w-4" />
+            <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Link>
         </div>
       </section>

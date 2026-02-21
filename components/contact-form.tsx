@@ -11,8 +11,8 @@ export function ContactForm() {
 
   if (state.success) {
     return (
-      <div className="rounded-2xl border border-stone/15 p-8 sm:p-10 bg-warm-white text-center">
-        <CheckCircle className="h-12 w-12 text-copper mx-auto mb-4" />
+      <div role="status" className="rounded-2xl border border-stone/15 p-8 sm:p-10 bg-warm-white text-center">
+        <CheckCircle className="h-12 w-12 text-copper mx-auto mb-4" aria-hidden="true" />
         <h2 className="text-xl font-semibold text-charcoal mb-2">
           Message sent.
         </h2>
@@ -39,7 +39,7 @@ export function ContactForm() {
       </div>
 
       {state.error && (
-        <p className="mb-6 rounded-lg bg-red-50 px-4 py-3 text-sm text-red-700">
+        <p role="alert" className="mb-6 rounded-lg bg-red-50 px-4 py-3 text-sm text-red-700">
           {state.error}
         </p>
       )}
@@ -57,11 +57,13 @@ export function ContactForm() {
             id="name"
             name="name"
             required
-            className="w-full rounded-lg border border-stone/20 bg-cream/50 px-4 py-3 text-sm text-charcoal placeholder:text-stone/50 focus:border-copper focus:ring-2 focus:ring-copper/20 outline-none transition-all"
+            aria-describedby={state.fieldErrors.name ? "name-error" : undefined}
+            aria-invalid={state.fieldErrors.name ? true : undefined}
+            className="w-full rounded-lg border border-stone/20 bg-cream/50 px-4 py-3 text-sm text-charcoal placeholder:text-stone/50 focus:border-copper focus:ring-2 focus:ring-copper/20 focus:outline-none transition-all"
             placeholder="Your name"
           />
           {state.fieldErrors.name && (
-            <p className="mt-1 text-sm text-red-600">{state.fieldErrors.name}</p>
+            <p id="name-error" role="alert" className="mt-1 text-sm text-red-600">{state.fieldErrors.name}</p>
           )}
         </div>
 
@@ -77,11 +79,13 @@ export function ContactForm() {
             id="email"
             name="email"
             required
-            className="w-full rounded-lg border border-stone/20 bg-cream/50 px-4 py-3 text-sm text-charcoal placeholder:text-stone/50 focus:border-copper focus:ring-2 focus:ring-copper/20 outline-none transition-all"
+            aria-describedby={state.fieldErrors.email ? "email-error" : undefined}
+            aria-invalid={state.fieldErrors.email ? true : undefined}
+            className="w-full rounded-lg border border-stone/20 bg-cream/50 px-4 py-3 text-sm text-charcoal placeholder:text-stone/50 focus:border-copper focus:ring-2 focus:ring-copper/20 focus:outline-none transition-all"
             placeholder="you@company.com"
           />
           {state.fieldErrors.email && (
-            <p className="mt-1 text-sm text-red-600">{state.fieldErrors.email}</p>
+            <p id="email-error" role="alert" className="mt-1 text-sm text-red-600">{state.fieldErrors.email}</p>
           )}
         </div>
 
@@ -99,7 +103,7 @@ export function ContactForm() {
             type="url"
             id="website"
             name="website"
-            className="w-full rounded-lg border border-stone/20 bg-cream/50 px-4 py-3 text-sm text-charcoal placeholder:text-stone/50 focus:border-copper focus:ring-2 focus:ring-copper/20 outline-none transition-all"
+            className="w-full rounded-lg border border-stone/20 bg-cream/50 px-4 py-3 text-sm text-charcoal placeholder:text-stone/50 focus:border-copper focus:ring-2 focus:ring-copper/20 focus:outline-none transition-all"
             placeholder="https://yourwebsite.com"
           />
         </div>
@@ -116,11 +120,13 @@ export function ContactForm() {
             name="message"
             rows={5}
             required
-            className="w-full rounded-lg border border-stone/20 bg-cream/50 px-4 py-3 text-sm text-charcoal placeholder:text-stone/50 focus:border-copper focus:ring-2 focus:ring-copper/20 outline-none transition-all resize-none"
+            aria-describedby={state.fieldErrors.message ? "message-error" : undefined}
+            aria-invalid={state.fieldErrors.message ? true : undefined}
+            className="w-full rounded-lg border border-stone/20 bg-cream/50 px-4 py-3 text-sm text-charcoal placeholder:text-stone/50 focus:border-copper focus:ring-2 focus:ring-copper/20 focus:outline-none transition-all resize-none"
             placeholder="Tell us about your business and what you're looking for..."
           />
           {state.fieldErrors.message && (
-            <p className="mt-1 text-sm text-red-600">{state.fieldErrors.message}</p>
+            <p id="message-error" role="alert" className="mt-1 text-sm text-red-600">{state.fieldErrors.message}</p>
           )}
         </div>
 
@@ -130,10 +136,10 @@ export function ContactForm() {
           className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-copper px-7 py-3.5 text-sm font-semibold text-warm-white hover:bg-copper-dark transition-colors disabled:opacity-50"
         >
           {pending ? "Sending…" : "Send Message"}
-          {!pending && <ArrowRight className="h-4 w-4" />}
+          {!pending && <ArrowRight className="h-4 w-4" aria-hidden="true" />}
         </button>
 
-        <p className="text-xs text-stone/60 text-center">
+        <p className="text-xs text-stone text-center">
           No spam. No mailing list. Just a direct reply from us.
         </p>
       </div>
