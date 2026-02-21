@@ -1,7 +1,9 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, ArrowLeft } from "lucide-react"
 import { getAllPosts } from "@/lib/blog"
+
+const POSTS_PER_PAGE = 10
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -20,8 +22,19 @@ export const metadata: Metadata = {
   },
 }
 
-export default function BlogPage() {
-  const posts = getAllPosts()
+export default async function BlogPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ page?: string }>
+}) {
+  const { page } = await searchParams
+  const currentPage = Math.max(1, parseInt(page || "1", 10) || 1)
+  const allPosts = getAllPosts()
+  const totalPages = Math.ceil(allPosts.length / POSTS_PER_PAGE)
+  const posts = allPosts.slice(
+    (currentPage - 1) * POSTS_PER_PAGE,
+    currentPage * POSTS_PER_PAGE
+  )
 
   return (
     <>
@@ -75,6 +88,46 @@ export default function BlogPage() {
               </article>
             ))}
           </div>
+
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <nav
+              className="flex items-center justify-between max-w-3xl mt-16 pt-8 border-t border-stone/10"
+              aria-label="Blog pagination"
+            >
+              {currentPage > 1 ? (
+                <Link
+                  href={
+                    currentPage === 2
+                      ? "/blog"
+                      : `/blog?page=${currentPage - 1}`
+                  }
+                  className="inline-flex items-center gap-1.5 text-sm font-medium text-copper hover:text-copper-dark transition-colors"
+                >
+                  <ArrowLeft className="h-3.5 w-3.5" />
+                  Previous
+                </Link>
+              ) : (
+                <span />
+              )}
+
+              <span className="text-sm text-stone">
+                Page {currentPage} of {totalPages}
+              </span>
+
+              {currentPage < totalPages ? (
+                <Link
+                  href={`/blog?page=${currentPage + 1}`}
+                  className="inline-flex items-center gap-1.5 text-sm font-medium text-copper hover:text-copper-dark transition-colors"
+                >
+                  Next
+                  <ArrowRight className="h-3.5 w-3.5" />
+                </Link>
+              ) : (
+                <span />
+              )}
+            </nav>
+          )}
         </div>
       </section>
 
