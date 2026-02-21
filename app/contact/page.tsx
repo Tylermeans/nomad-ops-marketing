@@ -1,18 +1,18 @@
 import type { Metadata } from "next"
-import { Mail, MessageSquare, Clock } from "lucide-react"
+import { Mail, Clock } from "lucide-react"
 import { ContactForm } from "@/components/contact-form"
 
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get a free website audit or talk to us about your project. No pressure, no commitment — just honest advice about your website.",
+    "Get a free website audit or talk to us about your project. Honest advice about your website, on us.",
   alternates: {
     canonical: "https://nomad-ops.com/contact",
   },
   openGraph: {
     title: "Contact | Nomad Ops",
     description:
-      "Get a free website audit or talk to us about your project. No pressure, no commitment — just honest advice.",
+      "Get a free website audit or talk to us about your project. Honest advice about your website, on us.",
     url: "https://nomad-ops.com/contact",
     siteName: "Nomad Ops",
     type: "website",
@@ -68,21 +68,6 @@ export default function ContactPage() {
                     >
                       hello@nomad-ops.com
                     </a>
-                  </div>
-                </div>
-
-                <div className="flex gap-5">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-cream shrink-0">
-                    <MessageSquare className="h-5 w-5 text-copper" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-charcoal">
-                      Book a call
-                    </h3>
-                    <p className="text-sm text-stone">
-                      15-minute intro — no pitch, just conversation about your
-                      goals.
-                    </p>
                   </div>
                 </div>
 

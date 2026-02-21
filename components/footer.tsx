@@ -70,6 +70,14 @@ export function Footer() {
           <p>
             &copy; {new Date().getFullYear()} Nomad Ops. All rights reserved.
           </p>
+          <div className="flex items-center gap-4">
+            <Link href="/privacy" className="hover:text-warm-white transition-colors">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="hover:text-warm-white transition-colors">
+              Terms
+            </Link>
+          </div>
           <p className="italic">Built from the road.</p>
         </div>
       </div>

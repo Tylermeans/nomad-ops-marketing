@@ -275,7 +275,7 @@ function Process() {
     {
       num: "01",
       title: "Audit",
-      text: "We analyze your current site with the same tools Google uses. You get a detailed report — free, no strings.",
+      text: "We analyze your current site with the same tools Google uses. You get a detailed report — free, yours to keep regardless.",
     },
     {
       num: "02",
@@ -370,7 +370,7 @@ function FAQ() {
     {
       question: "How much does a small business website cost?",
       answer:
-        "It depends on scope, but most of our projects fall between $2,500 and $8,000. We provide a clear, fixed-price quote after the initial audit so there are no surprises. You'll know exactly what you're getting and what it costs before we start.",
+        "Most projects start at $2,500. We provide a clear, fixed-price quote after the initial audit so there are no surprises. You'll know exactly what you're getting and what it costs before we start.",
     },
     {
       question: "How long does it take to build a website?",
@@ -380,7 +380,7 @@ function FAQ() {
     {
       question: "Do I really need a new website?",
       answer:
-        "Maybe not. Sometimes a site just needs performance optimization, better SEO, or a conversion-focused redesign of key pages. That's why we start with a free audit — we'll tell you honestly what would make the biggest impact, even if the answer is 'fix a few things and keep what you have.'",
+        "Maybe not. That's why we start with a free audit — we'll tell you honestly what would make the biggest impact, even if the answer is 'fix a few things and keep what you have.'",
     },
     {
       question: "What's included in the free website audit?",
@@ -390,12 +390,12 @@ function FAQ() {
     {
       question: "Will my website show up on Google?",
       answer:
-        "SEO is built into every site we create. We handle technical SEO (site structure, speed, schema markup), on-page optimization (meta tags, headings, content), and local SEO (Google Business Profile integration). We can't guarantee #1 rankings — no one honestly can — but we build the foundation that makes ranking possible.",
+        "SEO is built into every site we create — technical, on-page, and local. We can't guarantee #1 rankings, but we build the foundation that makes ranking possible.",
     },
     {
       question: "Do you work with businesses outside the US?",
       answer:
-        "Yes. We're a remote agency and work with businesses worldwide. Different time zones aren't a problem — we communicate async and schedule calls when they work for both of us.",
+        "Yes. We're fully remote and work across every time zone. Async communication plus scheduled calls when you need them.",
     },
   ]
 
@@ -473,6 +473,29 @@ function CTA() {
           Get a free, honest audit of your website. We&apos;ll show you
           what&apos;s working, what isn&apos;t, and exactly what to fix first.
         </p>
+
+        {/* Stat grid */}
+        <div className="mt-12 grid sm:grid-cols-3 gap-8 max-w-3xl mx-auto">
+          <div>
+            <p className="text-4xl font-bold text-copper">53%</p>
+            <p className="mt-2 text-sm text-stone">
+              of mobile users leave if a page takes over 3 seconds to load
+            </p>
+          </div>
+          <div>
+            <p className="text-4xl font-bold text-copper">75%</p>
+            <p className="mt-2 text-sm text-stone">
+              of searchers never look past Google&apos;s first page
+            </p>
+          </div>
+          <div>
+            <p className="text-4xl font-bold text-copper">60%+</p>
+            <p className="mt-2 text-sm text-stone">
+              of your visitors are on their phone right now
+            </p>
+          </div>
+        </div>
+
         <div className="mt-10">
           <Link
             href="/contact"
@@ -483,7 +506,7 @@ function CTA() {
           </Link>
         </div>
         <p className="mt-5 text-sm text-stone/70">
-          No credit card. No commitment. Just useful feedback.
+          Takes 30 seconds. Your report lands within 24 hours.
         </p>
       </div>
     </section>

@@ -66,22 +66,22 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-5 text-stone leading-relaxed text-lg">
               <p>
-                Small businesses were paying thousands for websites that looked
-                fine but didn&apos;t actually do anything. No traffic from
-                Google. No leads from visitors. Just a digital brochure
-                collecting dust.
+                It started with a mechanic in Flagstaff. He&apos;d paid $4,000
+                for a website that looked decent but did nothing — zero Google
+                traffic, zero leads. We rebuilt it in three weeks. Within two
+                months his incoming calls were up 40%.
               </p>
               <p>
-                The agencies building these sites didn&apos;t care about results
-                because they were already paid. The business owners didn&apos;t
-                know what &ldquo;good&rdquo; looked like because no one showed
-                them the data.
+                That project made something click. Small businesses everywhere
+                were stuck with expensive sites that didn&apos;t perform, built
+                by agencies that disappeared after the invoice cleared. The
+                owners had no idea what &ldquo;good&rdquo; even looked like
+                because nobody showed them the data.
               </p>
               <p>
-                We started Nomad Ops to do it differently. We analyze your
-                website with the same tools Google uses. We show you exactly
-                what&apos;s broken and what it&apos;s costing you. Then we fix
-                it.
+                So we started Nomad Ops. We analyze your website with the same
+                tools Google uses. We show you exactly what&apos;s broken and
+                what it&apos;s costing you. Then we fix it.
               </p>
             </div>
           </div>
@@ -109,9 +109,10 @@ export default function AboutPage() {
                       Data-driven decisions
                     </h3>
                     <p className="text-sm text-stone mt-1 leading-relaxed">
-                      Every design decision is backed by performance data, SEO
-                      analysis, and conversion best practices. We don&apos;t
-                      guess — we measure.
+                      Every decision is backed by data. We A/B test layouts,
+                      headlines, and calls-to-action to find what actually
+                      converts — then double down on what works. We don&apos;t
+                      guess. We measure.
                     </p>
                   </div>
                 </div>
@@ -184,7 +185,7 @@ export default function AboutPage() {
               },
               {
                 title: "Radical transparency",
-                text: "You see the data. You own the code. You understand what we're doing and why. No black boxes.",
+                text: "You see the data. You own the code. You understand what we're doing and why. Everything in the open.",
               },
               {
                 title: "Honest recommendations",
@@ -196,7 +197,7 @@ export default function AboutPage() {
               },
               {
                 title: "You own everything",
-                text: "Your code, your domain, your hosting, your content. Leave anytime with everything. No hostages.",
+                text: "Your code, your domain, your hosting, your content. Walk away anytime with everything.",
               },
               {
                 title: "Long-term thinking",

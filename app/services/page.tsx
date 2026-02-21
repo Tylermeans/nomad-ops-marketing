@@ -11,6 +11,8 @@ import {
   Code,
   Palette,
   TrendingUp,
+  FlaskConical,
+  Brush,
 } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -125,6 +127,30 @@ const services = [
       "Conversion tracking",
       "Monthly reviews",
       "Content recommendations",
+    ],
+  },
+  {
+    icon: FlaskConical,
+    title: "A/B Testing",
+    description:
+      "Test headlines, layouts, and CTAs with real visitors. We run controlled experiments to find what actually converts — then double down on the winners.",
+    features: [
+      "Headline and CTA testing",
+      "Layout variants",
+      "Statistical significance",
+      "Ongoing optimization",
+    ],
+  },
+  {
+    icon: Brush,
+    title: "Branding & Design",
+    description:
+      "Visual identities that stand out and stay consistent. From logos to color systems to brand guidelines — everything your business needs to look professional everywhere.",
+    features: [
+      "Logo and identity design",
+      "Brand style guidelines",
+      "Color and typography systems",
+      "Marketing collateral",
     ],
   },
 ]
