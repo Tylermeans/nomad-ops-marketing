@@ -17,6 +17,17 @@ export const metadata: Metadata = {
   title: "Services",
   description:
     "Web design, SEO optimization, performance tuning, and ongoing support for small businesses. Results-driven websites that rank and convert.",
+  alternates: {
+    canonical: "https://nomad-ops.com/services",
+  },
+  openGraph: {
+    title: "Services | Nomad Ops",
+    description:
+      "Web design, SEO optimization, performance tuning, and ongoing support for small businesses.",
+    url: "https://nomad-ops.com/services",
+    siteName: "Nomad Ops",
+    type: "website",
+  },
 }
 
 const services = [
@@ -39,7 +50,7 @@ const services = [
       "Clean, modern code built with the latest technologies. Fast page loads, smooth interactions, and rock-solid reliability. Every site is built to perform — not just to exist.",
     features: [
       "Next.js / React for speed",
-      "Lighthouse scores 90+",
+      "Performance-first architecture",
       "Accessibility compliance",
       "Clean, maintainable code",
     ],
@@ -72,7 +83,7 @@ const services = [
     icon: Zap,
     title: "Performance Optimization",
     description:
-      "Speed is a ranking factor and a conversion factor. We optimize images, minimize code, leverage caching, and tune servers for sub-two-second loads.",
+      "Speed is a ranking factor and a conversion factor. We optimize images, minimize code, leverage caching, and tune servers so your site loads as fast as possible.",
     features: [
       "Core Web Vitals optimization",
       "Image and asset compression",

@@ -5,6 +5,17 @@ export const metadata: Metadata = {
   title: "Contact",
   description:
     "Get a free website audit or talk to us about your project. No pressure, no commitment — just honest advice about your website.",
+  alternates: {
+    canonical: "https://nomad-ops.com/contact",
+  },
+  openGraph: {
+    title: "Contact | Nomad Ops",
+    description:
+      "Get a free website audit or talk to us about your project. No pressure, no commitment — just honest advice.",
+    url: "https://nomad-ops.com/contact",
+    siteName: "Nomad Ops",
+    type: "website",
+  },
 }
 
 export default function ContactPage() {

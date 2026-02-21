@@ -1,8 +1,11 @@
 import type { Metadata } from "next"
+import Script from "next/script"
 import { Geist, Geist_Mono } from "next/font/google"
 import { Nav } from "@/components/nav"
 import { Footer } from "@/components/footer"
 import "./globals.css"
+
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +37,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.svg",
   },
+  alternates: {
+    canonical: "https://nomad-ops.com",
+  },
   openGraph: {
     title: "Nomad Ops — Websites That Work as Hard as You Do",
     description:
@@ -51,9 +57,32 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      {GTM_ID && (
+        <Script
+          id="gtm-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${GTM_ID}');`,
+          }}
+        />
+      )}
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {GTM_ID && (
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+            />
+          </noscript>
+        )}
         <Nav />
         <main>{children}</main>
         <Footer />
@@ -69,6 +98,7 @@ export default function RootLayout({
               description:
                 "Remote web design agency for small businesses. We build fast, SEO-optimized websites that rank and convert.",
               url: "https://nomad-ops.com",
+              logo: "https://nomad-ops.com/logo.svg",
               email: "hello@nomad-ops.com",
               priceRange: "$$",
               areaServed: "Worldwide",
@@ -78,6 +108,7 @@ export default function RootLayout({
                 "SEO Optimization",
                 "Website Audit",
               ],
+              sameAs: [],
             }),
           }}
         />

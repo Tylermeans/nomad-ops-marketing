@@ -43,15 +43,3 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
 }
-
-/* Image placeholder styling for pre-launch */
-.img-placeholder {
-  background: linear-gradient(135deg, var(--sand-light) 0%, var(--cream) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--sand-dark);
-  font-size: 0.75rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}

@@ -167,23 +167,23 @@ function WhatWeDo() {
           eyebrow="Design that converts"
           heading="Websites built for your customers, not just for looks."
           text="Every layout decision, every button placement, every line of copy is designed to move visitors toward action. We don't build digital brochures — we build sales tools."
-          imageSrc="/images/workspace-laptop.jpg"
-          imageAlt="Modern website design on laptop in a clean workspace"
+          imageSrc="/images/design-process.svg"
+          imageAlt="Box and whisker chart showing design iteration improving conversion scores across rounds"
         />
         <SplitFeature
           eyebrow="SEO from day one"
           heading="Show up when people search for what you do."
           text="Technical SEO isn't something we bolt on after. Site structure, page speed, meta tags, local search optimization — it's all built into the foundation. Your site launches ready to rank."
-          imageSrc="/images/analytics-dashboard.jpg"
-          imageAlt="Analytics dashboard showing SEO performance metrics"
+          imageSrc="/images/seo-growth.svg"
+          imageAlt="Organic traffic growth chart showing 380% increase after site launch"
           reverse
         />
         <SplitFeature
           eyebrow="Built for speed"
-          heading="Sub-two-second loads. On every device."
-          text="Slow websites lose customers. Google penalizes them. We obsess over performance — optimized images, clean code, edge caching — because every millisecond matters to your bottom line."
-          imageSrc="/images/devices-phone.jpg"
-          imageAlt="Website displayed on mobile phone showing responsive design"
+          heading="Performance that moves the needle."
+          text="Slow websites lose customers and Google penalizes them. We obsess over Core Web Vitals — optimized images, clean code, edge caching — so your site loads fast and keeps visitors engaged."
+          imageSrc="/images/lighthouse-phone.svg"
+          imageAlt="iPhone displaying a website with perfect Lighthouse performance score of 100"
         />
       </div>
     </section>

@@ -7,6 +7,17 @@ export const metadata: Metadata = {
   title: "About",
   description:
     "Nomad Ops is a remote web design agency. We build results-driven websites for small businesses from wherever the road takes us.",
+  alternates: {
+    canonical: "https://nomad-ops.com/about",
+  },
+  openGraph: {
+    title: "About | Nomad Ops",
+    description:
+      "Remote web design agency. We build results-driven websites for small businesses from wherever the road takes us.",
+    url: "https://nomad-ops.com/about",
+    siteName: "Nomad Ops",
+    type: "website",
+  },
 }
 
 export default function AboutPage() {
