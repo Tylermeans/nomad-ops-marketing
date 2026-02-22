@@ -18,6 +18,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://nomad-ops.com"),
   title: {
     default: "Nomad Ops — Websites That Work as Hard as You Do",
     template: "%s | Nomad Ops",
@@ -47,6 +48,9 @@ export const metadata: Metadata = {
     url: "https://nomad-ops.com",
     siteName: "Nomad Ops",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 }
 
