@@ -127,8 +127,8 @@ export default function TermsPage() {
             </h2>
             <p>
               These terms are governed by and construed in accordance with the
-              laws of [State/Jurisdiction]. Any disputes shall be resolved in
-              the courts of [State/Jurisdiction].
+              laws of the State of Ohio. Any disputes shall be resolved in
+              the courts of the State of Ohio.
             </p>
           </div>
 
